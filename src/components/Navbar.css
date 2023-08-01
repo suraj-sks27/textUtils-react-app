@@ -1,0 +1,36 @@
+nav {
+  background-color: rgb(124, 83, 182);
+}
+
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 590px) {
+  .container {
+    max-width: 95vw;
+  }
+}
+
+.logo h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.menu {
+  flex: 1;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.menu ul li {
+  list-style: none;
+  color: white;
+}

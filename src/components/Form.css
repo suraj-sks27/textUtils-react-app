@@ -1,0 +1,68 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.form-heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.form-email {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 0.25rem;
+}
+
+.form-email label {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.form-email input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.form-textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 0.25rem;
+}
+
+.form-textarea label {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.form-textarea textarea {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  background: hsl(252, 30%, 50%);
+  color: white;
+
+  font-weight: 600;
+  border: none;
+  outline: none;
+
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: hsl(252, 30%, 55%);
+}

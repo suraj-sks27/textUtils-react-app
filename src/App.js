@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <>
-      <Navbar logo="SKS" />
+      <Navbar logo="SKS" theme="dark-mode" />
       <Form heading="forms" />
     </>
   );

@@ -1,9 +1,21 @@
 import React from 'react';
 import './Navbar.css';
+import { UilMoon } from '@iconscout/react-unicons';
+import { useState } from 'react';
+import { UilBars } from '@iconscout/react-unicons';
 import PropTypes from 'prop-types';
 
 //!-----PROPS-----
 export default function Navbar(props) {
+  const [theme, setTheme] = useState('');
+
+  //handle theme
+  const handleTheme = () => {
+    setTheme(props.theme);
+    let newTheme = theme;
+    document.querySelector('body').classList.toggle(newTheme);
+  };
+
   return (
     <>
       <nav>
@@ -18,6 +30,10 @@ export default function Navbar(props) {
               <li>Conntact</li>
               <li>Phone</li>
             </ul>
+          </div>
+          <div className="icons">
+            <UilMoon size="20" onClick={handleTheme} />
+            <UilBars size="20" />
           </div>
         </div>
       </nav>

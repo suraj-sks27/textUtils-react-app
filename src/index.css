@@ -1,8 +1,8 @@
 :root {
-  --bg-background-light: #fff;
+  --bg-background-light: #d7d7d7;
   --bg-color-light: #111;
   --bg-background-dark: hsl(252, 60%, 10%);
-  --bg-color-dark: #fff;
+  --bg-color-dark: #d7d7d7;
 }
 
 body {

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 //!-----PROPS-----
 export default function Navbar(props) {
-  const [theme, setTheme] = useState('');
+  const [theme, setTheme] = useState(props.theme);
 
   //handle theme
   const handleTheme = () => {

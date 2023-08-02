@@ -19,6 +19,11 @@ export default function Form(props) {
     setText(newText);
   };
 
+  const handelClearClick = () => {
+    let newText = '';
+    setText(newText);
+  };
+
   //todo----onChange event listener of the textarea------//
   const handleOnChange = (event) => {
     //?changing the state(using setText)
@@ -47,6 +52,7 @@ export default function Form(props) {
       <div className="form-buttons">
         <button onClick={handelUpClick}>Convert to uppercase</button>
         <button onClick={handelLowClick}>Convert to lowercase</button>
+        <button onClick={handelClearClick}>Clear text</button>
       </div>
 
       <div>

@@ -82,3 +82,11 @@ button:hover {
 
   flex-wrap: wrap;
 }
+
+@media screen and (max-width: 590px) {
+  button {
+    padding: 0.5rem;
+    font-size: medium;
+    font-weight: 500;
+  }
+}

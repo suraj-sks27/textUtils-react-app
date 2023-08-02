@@ -8,12 +8,6 @@ nav > div {
   align-items: center;
 }
 
-@media screen and (max-width: 590px) {
-  .container {
-    max-width: 95vw;
-  }
-}
-
 .logo h1 {
   color: white;
   font-size: 3rem;
@@ -33,4 +27,13 @@ nav > div {
 .menu ul li {
   list-style: none;
   color: white;
+}
+
+@media screen and (max-width: 590px) {
+  .container {
+    max-width: 95vw;
+  }
+  .menu {
+    display: none;
+  }
 }

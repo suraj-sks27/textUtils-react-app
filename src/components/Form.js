@@ -1,16 +1,21 @@
 import React from 'react';
 import './Form.css';
-//! using ReactHooks to set a STATE
+//! using ReactHooks to use a STATE
 import { useState } from 'react';
 
 export default function Form(props) {
   //?declare useState
-  const [text, setText] = useState('Enter you comment here...');
+  const [text, setText] = useState('');
 
   //todo----onclick event listener of the button------//
   const handelUpClick = () => {
     let newText = text.toUpperCase();
     //?changing the state(using setText)
+    setText(newText);
+  };
+
+  const handelLowClick = () => {
+    let newText = text.toLowerCase();
     setText(newText);
   };
 
@@ -33,15 +38,27 @@ export default function Form(props) {
         {/* using useState */}
         <textarea
           id="text"
-          cols="60"
           rows="10"
           value={text}
           onChange={handleOnChange}
         ></textarea>
       </div>
 
-      <div>
+      <div className="form-buttons">
         <button onClick={handelUpClick}>Convert to uppercase</button>
+        <button onClick={handelLowClick}>Convert to lowercase</button>
+      </div>
+
+      <div>
+        <h2>Your text Summary</h2>
+        <p>
+          Words {text.split(' ').length} and characters {text.length}
+        </p>
+      </div>
+
+      <div>
+        <h2>Preview</h2>
+        <p>{text}</p>
       </div>
     </div>
   );

@@ -46,8 +46,16 @@
 }
 
 .form-textarea textarea {
+  width: 100%;
   font-size: 1.5rem;
   font-family: sans-serif;
+
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.form-textarea textarea:focus {
+  outline: 1px solid hsl(252, 30%, 50%);
 }
 
 button {
@@ -65,4 +73,12 @@ button {
 
 button:hover {
   background-color: hsl(252, 30%, 55%);
+}
+
+.form-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  flex-wrap: wrap;
 }

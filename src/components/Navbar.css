@@ -36,7 +36,11 @@ nav > div {
   margin-left: 5rem;
   color: white;
 }
-.icons :nth-child(2) {
+.icons :nth-child(3) {
+  display: none;
+}
+
+.hidden {
   display: none;
 }
 
@@ -50,7 +54,7 @@ nav > div {
   .icons {
     margin-left: 2rem;
   }
-  .icons :nth-child(2) {
+  .icons :nth-child(3) {
     display: block;
   }
 }

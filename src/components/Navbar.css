@@ -1,5 +1,5 @@
 nav {
-  background-color: rgb(124, 83, 182);
+  background-color: rgb(88, 35, 162);
 }
 
 nav > div {
@@ -24,9 +24,17 @@ nav > div {
   gap: 2rem;
 }
 
-.menu ul li {
+.menu ul li,
+.link {
   list-style: none;
+  text-decoration: none;
   color: white;
+
+  cursor: pointer;
+}
+.menu ul li:hover,
+.link:hover {
+  color: var(--bg-background-light);
 }
 
 .icons {

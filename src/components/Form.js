@@ -57,8 +57,11 @@ export default function Form(props) {
 
       <div>
         <h2>Your text Summary</h2>
+        {/* if text is empty setting word count to 0 && if a character has " " then not counting it as another word */}
         <p>
-          Words {text.split(' ').length} and characters {text.length}
+          Words
+          {text === '' || text === ' ' ? '0' : text.split(' ').length - 1} and
+          characters {text.length}
         </p>
       </div>
 

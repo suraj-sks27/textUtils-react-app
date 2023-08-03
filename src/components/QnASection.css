@@ -1,0 +1,28 @@
+.qa-container {
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.qa-container h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+
+  font-weight: 700;
+  text-align: center;
+}
+
+.qa-container div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.qa-container div:nth-child(3) ul {
+  list-style: none;
+}

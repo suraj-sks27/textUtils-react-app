@@ -8,6 +8,9 @@ import { UilSun } from '@iconscout/react-unicons';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
+//!to create React Router links
+import { Outlet, Link } from 'react-router-dom';
+
 //!-----PROPS-----
 export default function Navbar(props) {
   const [theme, setTheme] = useState(props.theme);
@@ -17,13 +20,17 @@ export default function Navbar(props) {
     //creating constants
     const moon = document.querySelector('#moon');
     const sun = document.querySelector('#sun');
+    const textarea = document.querySelector('#text');
 
     //changing theme
     setTheme(props.theme);
     let newTheme = theme;
 
     document.querySelector('body').classList.toggle(newTheme);
-    document.querySelector('#text').classList.toggle(newTheme);
+    //if the component contains textarea then only apply this
+    if (textarea) {
+      textarea.classList.toggle(newTheme);
+    }
 
     //changing icon
     if (sun.classList.contains('hidden')) {
@@ -35,6 +42,8 @@ export default function Navbar(props) {
     }
   };
 
+  //!fixing theme bugs
+
   return (
     <>
       <nav>
@@ -44,10 +53,28 @@ export default function Navbar(props) {
           </div>
           <div className="menu">
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Conntact</li>
-              <li>Phone</li>
+              <li>
+                <Link className="link" to="home">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link className="link" to="QnASection">
+                  About
+                </Link>
+              </li>
+              <li>
+                Contact
+                {/* <Link className="link" to="contact">
+                  Contact
+                </Link> */}
+              </li>
+              <li>
+                Phone
+                {/* <Link className="link" to="phone">
+                  Phone
+                </Link> */}
+              </li>
             </ul>
           </div>
           <div className="icons">
@@ -63,6 +90,8 @@ export default function Navbar(props) {
           </div>
         </div>
       </nav>
+
+      <Outlet />
     </>
   );
 }

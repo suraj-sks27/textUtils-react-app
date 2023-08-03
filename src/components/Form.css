@@ -63,6 +63,14 @@
   outline: 1px solid hsl(252, 30%, 50%);
 }
 
+#theme-btn {
+  background-color: hsl(252, 30%, 80%);
+  color: black;
+}
+#theme-btn:hover {
+  background-color: hsl(252, 30%, 70%);
+}
+
 button {
   padding: 10px 20px;
   font-size: 1.25rem;

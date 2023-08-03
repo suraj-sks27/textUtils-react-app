@@ -30,6 +30,12 @@ export default function Form(props) {
     setText(event.target.value);
   };
 
+  const handleTheme = () => {
+    const textarea = document.querySelector('#text');
+
+    textarea.classList.toggle('dark-mode');
+  };
+
   return (
     <div className="container form-container">
       <h1 className="form-heading">{props.heading}</h1>
@@ -55,6 +61,9 @@ export default function Form(props) {
         <button onClick={handelUpClick}>Convert to uppercase</button>
         <button onClick={handelLowClick}>Convert to lowercase</button>
         <button onClick={handelClearClick}>Clear text</button>
+        <button id="theme-btn" onClick={handleTheme}>
+          Change Theme
+        </button>
       </div>
 
       <div>

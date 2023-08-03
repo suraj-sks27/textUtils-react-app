@@ -28,10 +28,8 @@ export default function Navbar(props) {
 
     document.querySelector('body').classList.toggle(newTheme);
     //if the component contains textarea then only apply this
-    if (document.querySelector('body').classList.contains(newTheme)) {
-      textarea.classList.add(newTheme);
-    } else {
-      textarea.classList.remove(newTheme);
+    if (textarea) {
+      textarea.classList.toggle(newTheme);
     }
 
     //changing icon

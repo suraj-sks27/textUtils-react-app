@@ -39,7 +39,9 @@ export default function Form(props) {
       </div>
 
       <div className="form-textarea">
-        <label htmlFor="text">Leave us a comment</label>
+        <label htmlFor="text">
+          Try textUtils - Word Counter, Character Counter, Clear text
+        </label>
         {/* using useState */}
         <textarea
           id="text"
@@ -59,9 +61,14 @@ export default function Form(props) {
         <h2>Your text Summary</h2>
         {/* if text is empty setting word count to 0 && if a character has " " then not counting it as another word */}
         <p>
-          Words
-          {text === '' || text === ' ' ? '0' : text.split(' ').length - 1} and
-          characters {text.length}
+          Words{' '}
+          {
+            //? agar space diye ya newline me gye to naya word kehlayega aur agar naye word ka length 0 hai matlb kuch type nhi kiya gya hai space ke baad to usko count nhi kiya jayega word me
+            text.split(/\s+/).filter((element) => {
+              return element.length !== 0;
+            }).length
+          }{' '}
+          and characters {text.length}
         </p>
       </div>
 

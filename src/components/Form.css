@@ -94,4 +94,10 @@ button:hover {
     font-size: medium;
     font-weight: 500;
   }
+
+  .form-textarea label,
+  .form-email label {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
 }
